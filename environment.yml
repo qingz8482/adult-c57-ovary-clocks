@@ -1,0 +1,27 @@
+name: adult-c57-ovary-clocks
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.12
+  - r-base=4.4
+  - r-data.table
+  - r-matrix
+  - r-dplyr
+  - r-tidyr
+  - r-tibble
+  - r-stringr
+  - r-readr
+  - r-ggplot2
+  - r-ggrepel
+  - r-forcats
+  - r-scales
+  - r-patchwork
+  - r-glmnet
+  - r-seurat
+  - r-msigdbr
+  - r-yaml
+  - r-ragg
+  - r-matrixstats
+  - bioconductor-edger
+  - bioconductor-limma

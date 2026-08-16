@@ -1,0 +1,38 @@
+# Local inputs and generated outputs
+data/
+data_input/
+outputs/
+results/
+models/
+*.rds
+*.RData
+*.h5ad
+*.h5seurat
+*.loom
+*.parquet
+*.mtx
+*.mtx.gz
+
+# Environments and caches
+.venv/
+renv/library/
+renv/staging/
+__pycache__/
+*.py[cod]
+.Rhistory
+.Rproj.user/
+.cache/
+
+# Scheduler, logs, and editor files
+*.log
+slurm-*.out
+.DS_Store
+.vscode/
+.idea/
+
+# Secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key

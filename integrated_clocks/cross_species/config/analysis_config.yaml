@@ -1,0 +1,29 @@
+seed: 20260719
+release_date: "2026-07-19"
+mouse:
+  artifact_dir: "data/integrated_clock_artifacts/deployment"
+  alignment_file: "data/integrated_clock_artifacts/integrated_bulk_pseudobulk_sample_expression_alignment.tsv"
+  authoritative_results: "data/integrated_clock_artifacts/results"
+gtex:
+  release: "v11"
+  annotation: "GENCODE 47"
+  counts_url: "https://storage.googleapis.com/adult-gtex/bulk-gex/v11/rna-seq/counts-by-tissue/gene_reads_adult_gtex_v11_ovary.gct.gz"
+  sample_attributes_url: "https://storage.googleapis.com/adult-gtex/annotations/v11/metadata-files/GTEx_Analysis_v11_Annotations_SampleAttributesDS.txt"
+  subject_phenotypes_url: "https://storage.googleapis.com/adult-gtex/annotations/v11/metadata-files/GTEx_Analysis_v11_Annotations_SubjectPhenotypesDS.txt"
+  filter_min_count: 10
+  filter_min_fraction: 0.20
+  prior_count: 2
+hpa:
+  release: "25.1"
+  ensembl_version: "109"
+  transcript_url: "https://www.proteinatlas.org/download/tsv/transcript_rna_tissue.tsv.zip"
+  samples_url: "https://www.proteinatlas.org/download/tsv/rna_tissue_hpa_samples.tsv.zip"
+ensembl:
+  release: 116
+  mart_url: "https://www.ensembl.org/biomart/martservice"
+analysis:
+  random_sets: 10000
+  stage_b_random_signatures: 10000
+  hard_reproduction_tolerance: 1.0e-8
+  high_weighted_coverage: 0.80
+  moderate_weighted_coverage: 0.60

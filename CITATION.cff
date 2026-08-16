@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the associated article and archived software release."
+title: "Adult C57 ovary transcriptomic clocks"
+type: software
+authors:
+  - name: "Adult C57 Ovary Clocks contributors"
+version: 1.0.0
+date-released: 2026-08-16
+license: MIT
+repository-code: "https://github.com/qingz8482/adult-c57-ovary-clocks"
+abstract: "Code for integrated ElasticNet and PCA/glmnet ovarian ageing clocks and cell-type-specific metacell ElasticNet clocks."
