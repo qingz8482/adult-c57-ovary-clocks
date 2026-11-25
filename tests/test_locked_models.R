@@ -4,7 +4,7 @@
 # 2. its predictions equal a manual replay from the exported text files
 #    (raw-scale intercept + coefficients on ln1p(CPM); PCA: gene weights = loadings x PC coefficients / scale);
 # 3. missing genes are imputed with the training mean (zero contribution);
-# 4. the exported coefficients match Supplementary Tables 3a/3b.
+# 4. the exported coefficients match Supplementary Data 3a/3b.
 suppressPackageStartupMessages(library(data.table))
 fa <- sub("^--file=", "", grep("^--file=", commandArgs(FALSE), value = TRUE)[1])
 repo <- normalizePath(file.path(dirname(fa), ".."))
@@ -48,13 +48,13 @@ for (m in c("HVG-ElasticNet-exclude-single-age", "VersionB-PCA-glmnet")) {
   cat(sprintf("%s: predict_frozen.R matches text-export replay (max |diff| = %.2e weeks)\n", m, err))
 }
 
-# Exported coefficients versus the published Supplementary Tables 3a/3b.
+# Exported coefficients versus the published Supplementary Data 3a/3b.
 en <- fread(file.path(rel, "HVG-ElasticNet-exclude-single-age", "coefficients.csv"))[coefficient != 0]
-st3a <- fread(file.path(repo, "metadata", "manuscript_tables", "ST3a_EN_nonzero_coefficients.tsv"), skip = 1)
+st3a <- fread(file.path(repo, "metadata", "manuscript_tables", "SD3a_EN_nonzero_coefficients.tsv"), skip = 1)
 stopifnot(nrow(en) == 79L, nrow(st3a) == 79L, setequal(en$gene, st3a$gene))
 stopifnot(max(abs(en$coefficient - as.numeric(st3a[[2]][match(en$gene, st3a$gene)]))) < 1e-9)
 pc <- fread(file.path(rel, "VersionB-PCA-glmnet", "pc_coefficients.csv"))
 stopifnot(identical(which(pc$coefficient != 0), c(1L, 2L, 5L, 8L)))
-cat("Exported coefficients match Supplementary Table 3a (79 EN genes); PCA/EN active PCs = PC1, PC2, PC5, PC8\n")
+cat("Exported coefficients match Supplementary Data 3a (79 EN genes); PCA/EN active PCs = PC1, PC2, PC5, PC8\n")
 unlink(tmp, recursive = TRUE)
 cat("locked-model smoke test passed\n")

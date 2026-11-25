@@ -1,6 +1,6 @@
 # Data access
 
-All source datasets are public. Dataset accessions and repositories are listed in `metadata/dataset_accessions.tsv`. Sample-level accessions are in `metadata/manuscript_tables/ST2a_model_development_profiles.tsv` and `ST2b_external_projection_profiles.tsv`.
+All source datasets are public. Dataset accessions and repositories are listed in `metadata/dataset_accessions.tsv`. Sample-level accessions are in `metadata/manuscript_tables/SD2a_model_development_profiles.tsv` and `SD2b_external_projection_profiles.tsv`.
 
 This repository does not redistribute FASTQ files, count matrices, Seurat objects, pseudobulk or metacell matrices, or generated results. The two locked integrated clocks are included in `locked_models/`.
 

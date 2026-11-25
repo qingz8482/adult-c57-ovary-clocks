@@ -19,11 +19,11 @@ stopifnot(setequal(folds$sample_key, dev$sample_key),
           sum(grepl("^repeat_[0-9]{2}$", names(folds))) == 30L,
           folds[, uniqueN(cv_fold), by = study][, all(V1 == 1L)])  # whole studies held out
 
-st2a <- mt("ST2a_model_development_profiles.tsv")
+st2a <- mt("SD2a_model_development_profiles.tsv")
 stopifnot(nrow(st2a) == 136L, setequal(st2a$sample_key, dev$sample_key))
-st2b <- mt("ST2b_external_projection_profiles.tsv")
+st2b <- mt("SD2b_external_projection_profiles.tsv")
 stopifnot(nrow(st2b) == 281L, !anyDuplicated(st2b$sample_key))
-st4 <- mt("ST4_prespecified_contrasts.tsv")
+st4 <- mt("SD4_benchmarked_contrasts.tsv")
 stopifnot(nrow(st4) == 36L)
 
 mc <- fread(pi("metacell_fold_assignments.tsv"))

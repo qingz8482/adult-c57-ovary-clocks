@@ -3,9 +3,14 @@ message: "If you use this code, please cite the associated article and archived 
 title: "Adult C57 ovary transcriptomic clocks"
 type: software
 authors:
-  - name: "Adult C57 Ovary Clocks contributors"
+  - family-names: "Zhang"
+    given-names: "Qing"
+    affiliation: "Yong Loo Lin School of Medicine, National University of Singapore"
+  - family-names: "Sorrentino"
+    given-names: "Vincenzo"
+    affiliation: "Yong Loo Lin School of Medicine, National University of Singapore"
 version: 2.0.0
 date-released: 2026-11-25
 license: MIT
 repository-code: "https://github.com/qingz8482/adult-c57-ovary-clocks"
-abstract: "Code and locked models for the integrated EN (HVG-ElasticNet, single-age studies excluded) and PCA/EN (Version B-PCA-glmnet) mouse ovarian ageing clocks developed by study-grouped nested cross-validation, and for cell-type-specific metacell ElasticNet clocks on v2 cell labels (revised manuscript)."
+abstract: "Code and locked models for the integrated EN (HVG-ElasticNet, single-age studies excluded) and PCA/EN (Version B-PCA-glmnet) mouse ovarian ageing clocks developed by study-grouped nested cross-validation, and for cell-type-specific metacell ElasticNet clocks on v2 cell labels (revised manuscript: Multiresolution transcriptomic clocks resolve ovarian aging signals and benchmark intervention responses in the mouse ovary)."

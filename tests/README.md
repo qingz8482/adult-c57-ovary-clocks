@@ -4,7 +4,7 @@
 - `run_smoke_tests.sh`: runs three checks:
   - locked-release checksums;
   - metadata validation (136 profiles and 14 studies; the 26-profile single-age exclusion leaving 110 EN training profiles; Stage A folds of 36/48/20/32 with whole studies held out; 30 repeats; 281 external profiles; 36 contrasts; 7,049 metacells in eight classes with five folds each);
-  - `test_locked_models.R`: synthetic input through `predict_frozen.R` must match a manual replay from the exported coefficients, missing-gene imputation must behave as documented, and the exports must match Supplementary Table 3a;
+  - `test_locked_models.R`: synthetic input through `predict_frozen.R` must match a manual replay from the exported coefficients, missing-gene imputation must behave as documented, and the exports must match Supplementary Data 3a;
 
 The tests use synthetic data only and do not reproduce biological results. Set `RSCRIPT` if `Rscript` is not on `PATH`.
 

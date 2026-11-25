@@ -33,11 +33,12 @@ Folds are assigned by metacell, so metacells from one biological sample can fall
 | 8 | `22_add_stress_heatmap_significance.R` | VCD/Foxl2 and GSE235021 delta heatmaps with Welch tests, plus the formal 6→9-month positive-control rule |
 | 9 | `23_plot_gse235021_six_clock_faceted_welch.R` | GSE235021 per-clock diet contrasts (BH over clocks × contrasts) |
 | 10 | `25_gse235021_alias_corrected_reprojection.R` | Independent check of the GSE235021 alias fix |
-| 11 | `24_sfig6_deployment_fit_scatter.R`, `25_sfig6_vcd_foxl2_merged.R` | Supplementary Fig. 6 deployment-fit scatters |
-| 12 | `26_…`, `27_…`, `28_…`, `29_…` | Fig. 5 fit-and-delta composites and stress-test cell composition |
-| 13 | `plot_sf5_gsea_nes_artboard.R` | Supplementary Fig. 5 GSEA NES panels |
+| 11 | `24_sfig6_deployment_fit_scatter.R`, `25_sfig6_vcd_foxl2_merged.R` | Deployment-fit scatter source tables (used by 26/27) |
+| 12 | `26_…`, `27_…` | Per-clock fit-and-delta composites for PRJNA863443 and GSE235021 (Fig. 5, Supplementary Fig. 6C–P) |
+| 13 | `28_…`, `29_…` | Stress-test cell-class composition |
+| 14 | `plot_sf5_gsea_nes_artboard.R` | Supplementary Fig. 5 GSEA NES panels |
 
-After any change to the GSE235021 projection, rerun scripts 4 → 8 → 9 → 10 → 11.
+After any change to the GSE235021 projection, rerun scripts 4 → 8 → 9 → 10 → 11 → 12.
 
 ### GSE235021 identifier handling
 
