@@ -25,10 +25,7 @@ Some scripts read sibling outputs by relative path, for example `../lockedmodel`
 | `metacell_clocks/00_label_audit` | `rebutal4/metacell_review` |
 | `metacell_clocks/01_labelling_v2` | `rebutal4/metacell_review/v2` |
 | `metacell_clocks/02_release_v2` | `rebutal4/metacell_review/reproduce` |
-| `figures/figure1_supplementary_figure1` | `rebutal4/figure1_model_development` |
-| `figures/supplementary_figure2` | `rebutal4/supplementary_figure2_pca` |
-| `figures/supplementary_figure3` | `rebutal4/supplementary_figure3_tage` |
-| `figures/figure4e` | `rebutal4/Publication/figures/fig4e_update` |
+| `integrated_clocks/07_en_ora/scripts` | `rebutal4/figure1_model_development/scripts` |
 
 ## Run order
 
@@ -39,7 +36,9 @@ Some scripts read sibling outputs by relative path, for example `../lockedmodel`
 5. **tAge comparison.** Run `integrated_clocks/05_tage_comparison/scripts/run_all.sh`; it needs the projection outputs from step 4.
 6. **Cross-species.** Run `integrated_clocks/06_cross_species/scripts/run_all.sh`.
 7. **Metacell clocks.** Follow [`../metacell_clocks/README.md`](../metacell_clocks/README.md): run `01_labelling_v2`, then `02_release_v2`.
-8. **Figures.** Run the scripts under `figures/` (see [`figure_code_map.tsv`](figure_code_map.tsv)).
+8. **EN non-zero-gene ORA.** Run `integrated_clocks/07_en_ora/scripts/enrich_elasticnet_nonzero_genes.R` in an R environment with clusterProfiler and org.Mm.eg.db.
+
+[`manuscript_code_map.tsv`](manuscript_code_map.tsv) lists the analysis code behind each figure and supplementary table. Figure-assembly scripts are not included.
 
 ## Invariants
 

@@ -1,6 +1,6 @@
 # Tests
 
-- `validate_repository.sh`: checks required paths, scans for cluster paths, credentials, files over 50 MiB and generated or archive folders, parses every R and Python script, validates the metadata and checks that every path in `docs/figure_code_map.tsv` exists.
+- `validate_repository.sh`: checks required paths, scans for cluster paths, credentials, files over 50 MiB and generated or archive folders, parses every R and Python script, validates the metadata and checks that every path in `docs/manuscript_code_map.tsv` exists.
 - `run_smoke_tests.sh`: runs three checks:
   - locked-release checksums;
   - metadata validation (136 profiles and 14 studies; the 26-profile single-age exclusion leaving 110 EN training profiles; Stage A folds of 36/48/20/32 with whole studies held out; 30 repeats; 281 external profiles; 36 contrasts; 7,049 metacells in eight classes with five folds each);

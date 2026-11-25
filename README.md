@@ -33,11 +33,10 @@ This release matches the revised manuscript. Version `v0.1-initial-submission` h
 | Folder | Contents |
 |---|---|
 | [`locked_models/`](locked_models/README.md) | The two deployed integrated clocks: `model.rds`, exported coefficients, scalers, PCA loadings, provenance, replay checks and checksums. |
-| [`integrated_clocks/`](integrated_clocks/README.md) | Input preparation, nested-CV model development, PCA/EN interpretation, external projection, tAge comparison and cross-species analyses. |
+| [`integrated_clocks/`](integrated_clocks/README.md) | Input preparation, nested-CV model development, PCA/EN interpretation, external projection, tAge comparison, cross-species analyses and EN non-zero-gene ORA. |
 | [`metacell_clocks/`](metacell_clocks/README.md) | v1 label audit, v2 labelling and metacell clock fitting, and the v2 figure and table release, including stress-test projections. |
-| [`figures/`](figures/README.md) | Assembly scripts for Fig. 1, Fig. 4e and Supplementary Figs 1–3. |
 | [`metadata/`](metadata/README.md) | Supplementary Tables 1–5 as TSV, plus the sample, fold and contrast tables the pipelines read. |
-| [`docs/`](docs/workflow.md) | Workflow, figure-to-code map, data access, environment and reproducibility boundary. |
+| [`docs/`](docs/workflow.md) | Workflow, manuscript-to-code map, data access, environment and reproducibility boundary. |
 | [`tests/`](tests/README.md) | Repository validation, metadata checks and a locked-model smoke test. |
 
 ## Applying the locked clocks

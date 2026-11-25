@@ -8,7 +8,7 @@ Additional packages by component:
 |---|---|
 | Model development | glmnet, data.table, jsonlite, Matrix |
 | PCA/EN GSEA, metacell GSEA | msigdbr (MSigDB 2026.1.Mm) |
-| EN non-zero-gene ORA | clusterProfiler, org.Mm.eg.db (run in a separate R environment) |
+| EN non-zero-gene ORA | clusterProfiler, org.Mm.eg.db (run in a separate R environment; `07_en_ora`) |
 | Cross-species | limma, edgeR, matrixStats, MASS, Rcpp |
 | Metacell labelling and clocks | Seurat (anchor-based label transfer), Matrix, glmnet |
 | tAge comparison | tAge v1.0.1 R package and Biobase, for predictions and control subtraction; a Python environment with the tAge model files (`TAGE_PYTHON`), for feature extraction and validation |

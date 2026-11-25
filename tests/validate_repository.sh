@@ -4,7 +4,7 @@ set -euo pipefail
 repo_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$repo_dir"
 
-required=(README.md LICENSE CITATION.cff environment.yml renv.lock locked_models/hvg_exclusion_vbpca_20261012/HVG-ElasticNet-exclude-single-age/model.rds locked_models/hvg_exclusion_vbpca_20261012/VersionB-PCA-glmnet/model.rds integrated_clocks metacell_clocks figures metadata/manuscript_tables metadata/pipeline_inputs docs/figure_code_map.tsv tests)
+required=(README.md LICENSE CITATION.cff environment.yml renv.lock locked_models/hvg_exclusion_vbpca_20261012/HVG-ElasticNet-exclude-single-age/model.rds locked_models/hvg_exclusion_vbpca_20261012/VersionB-PCA-glmnet/model.rds integrated_clocks metacell_clocks metadata/manuscript_tables metadata/pipeline_inputs docs/manuscript_code_map.tsv tests)
 for path in "${required[@]}"; do test -e "$path" || { echo "missing required path: $path" >&2; exit 1; }; done
 
 if grep -RInE '/mnt/beegfs|/home/qingz8482' --exclude-dir=.git --exclude=validate_repository.sh .; then
@@ -31,13 +31,13 @@ while IFS= read -r -d '' script; do python3 -c 'import ast, pathlib, sys; ast.pa
 
 rscript_bin="${RSCRIPT:-$(command -v Rscript || true)}"
 if [[ -n "$rscript_bin" ]]; then
-  "$rscript_bin" -e 'files <- list.files(c("integrated_clocks", "metacell_clocks", "figures", "locked_models", "tests"), pattern="[.]R$", recursive=TRUE, full.names=TRUE); invisible(lapply(files, parse))'
+  "$rscript_bin" -e 'files <- list.files(c("integrated_clocks", "metacell_clocks", "locked_models", "tests"), pattern="[.]R$", recursive=TRUE, full.names=TRUE); invisible(lapply(files, parse))'
   "$rscript_bin" tests/validate_metadata.R "$repo_dir"
-  while IFS=$'\t' read -r _ _ analysis assembly; do
-    for p in $(printf '%s;%s' "$analysis" "$assembly" | tr ';' '\n' | sed -E 's/^ +//; s/ \(.*//'); do
-      test -e "$p" || { echo "figure_code_map.tsv path missing: $p" >&2; exit 1; }
+  while IFS=$'\t' read -r _ _ analysis; do
+    for p in $(printf '%s' "$analysis" | tr ';' '\n' | sed -E 's/^ +//'); do
+      test -e "$p" || { echo "manuscript_code_map.tsv path missing: $p" >&2; exit 1; }
     done
-  done < <(tail -n +2 docs/figure_code_map.tsv)
+  done < <(tail -n +2 docs/manuscript_code_map.tsv)
 else
   echo "Rscript unavailable: R parse and metadata checks skipped" >&2
 fi
