@@ -1,0 +1,3 @@
+recipe,training_profiles,training_studies,selected_genes,nonzero_gene_coefficients,PC_inputs,nonzero_PC_count,source_prediction_max_error,gene_coefficient_prediction_max_error,status
+HVG-ElasticNet,110,9,3000,79,0,0,0,5.6843418860808e-14,PASS
+VersionB-PCA/glmnet,136,14,3000,3000,10,4,0,9.59232693276135e-14,PASS

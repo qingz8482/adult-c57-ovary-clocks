@@ -4,8 +4,8 @@ title: "Adult C57 ovary transcriptomic clocks"
 type: software
 authors:
   - name: "Adult C57 Ovary Clocks contributors"
-version: 1.0.0
-date-released: 2026-08-16
+version: 2.0.0
+date-released: 2026-11-25
 license: MIT
 repository-code: "https://github.com/qingz8482/adult-c57-ovary-clocks"
-abstract: "Code for integrated ElasticNet and PCA/glmnet ovarian ageing clocks and cell-type-specific metacell ElasticNet clocks."
+abstract: "Code and locked models for the integrated EN (HVG-ElasticNet, single-age studies excluded) and PCA/EN (Version B-PCA-glmnet) mouse ovarian ageing clocks developed by study-grouped nested cross-validation, and for cell-type-specific metacell ElasticNet clocks on v2 cell labels (revised manuscript)."

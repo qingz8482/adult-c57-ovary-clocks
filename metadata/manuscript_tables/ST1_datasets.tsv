@@ -1,0 +1,52 @@
+a, Dataset summary													
+modality	dataset_folder	dataset_name	n_samples_total	min_age_week	max_age_week	rebutal4_role	n_model_development_profiles	n_training_PCA_EN_final	n_training_EN_final	single_age_study_excluded_from_EN	n_external_projection_profiles	sample_contexts	Reference
+bulk_rnaseq	CRA003645	bulk_CRA003645_C57_ovary_timecourse	22	0.0714285714285714	53	model development and external projection	16	16	16	no	6	control_or_natural_aging	
+bulk_rnaseq	CRA017492	bulk_CRA017492_NMN_aging_ovary	12	8.699999999999999	52	model development and external projection	3	3	0	yes	12	control_or_natural_aging;intervention_or_vehicle	
+bulk_rnaseq	GSE106339	bulk_GSE106339_GOAT_model_ovary	8	3	3	external projection only	0	0	0		8	external_projection_only	
+bulk_rnaseq	GSE128240	bulk_GSE128240_cyclophosphamide_ovary	6	8.5	8.5	external projection only	0	0	0		6	external_projection_only	
+bulk_rnaseq	GSE154890	bulk_GSE154890_natural_aging_ovary	19	13.0444	52.1775	model development only	19	19	19	no	0	external_projection_only	
+bulk_rnaseq	GSE194196	bulk_GSE194196_Bnc1_model	6	16	16	model development and external projection	3	3	0	yes	6	control_or_natural_aging;genetic_model	
+bulk_rnaseq	GSE228975	bulk_GSE228975_neonatal_Srsf1_model	6	1.14285714285714	1.14285714285714	external projection only	0	0	0		6	control_or_natural_aging;genetic_model	
+bulk_rnaseq	GSE235021	bulk_GSE235021_rice_diet_ovary	18	26.0888	39.1331	external projection only	0	0	0		18	intervention_or_vehicle	
+bulk_rnaseq	GSE240547	bulk_GSE240547_diet_ovary	8	20	20	external projection only	0	0	0		8	intervention_or_vehicle	
+bulk_rnaseq	GSE249151	bulk_GSE249151_VCD_POI_ovary	15	10.1429	12.2857	external projection only	0	0	0		15	external_projection_only	
+bulk_rnaseq	GSE252791	bulk_GSE252791_Rnf111_estrus	6	12	12	model development and external projection	3	3	0	yes	6	control_or_natural_aging;genetic_model	
+bulk_rnaseq	GSE273724	bulk_GSE273724_HEP14_aging_ovary	19	7.5	73.5	external projection only	0	0	0		19	external_projection_reference_control;intervention_or_vehicle	
+bulk_rnaseq	GSE279446	bulk_GSE279446_Zeb1_model	24	10	32	external projection only	0	0	0		24	external_projection_reference_control;genetic_model	
+bulk_rnaseq	GSE279573	bulk_GSE279573_Abcg5g8_model	7	10	10	external projection only	0	0	0		7	external_projection_reference_control;genetic_model	
+bulk_rnaseq	GSE329024	bulk_GSE329024_CUMS_ovary	31	16.7	38	model development and external projection	7	7	7	no	31	control_or_natural_aging;external_projection_reference_control;stress_model	
+bulk_rnaseq	GSE98497	bulk_GSE98497_Mtor_CKO_ovary	12	26.0888	26.0888	external projection only	0	0	0		12	external_projection_only	
+bulk_rnaseq	NIHMS1554107	bulk_NIHMS1554107_natural_aging_timecourse	18	13	78	model development only	18	18	18	no	0	control_or_natural_aging	
+bulk_rnaseq	PRJNA1002222	bulk_PRJNA1002222_Cd38_KO_ovary	21	8.696300000000001	52.1775	external projection only	0	0	0		21	external_projection_only	
+bulk_rnaseq	PRJNA1076509	bulk_PRJNA1076509_FMT_ovary	14	17.4	17.4	external projection only	0	0	0		14	intervention_or_vehicle	
+bulk_rnaseq	PRJNA787028	bulk_PRJNA787028_housing_density_ovary	12	18	18	external projection only	0	0	0		12	external_projection_only	
+bulk_rnaseq	PRJNA924255	bulk_PRJNA924255_AAV_sh_Sema4C_ovary	10	13	13	not used in rebutal4 analyses	0	0	0		0	external_projection_only	
+scrna_pseudobulk	SCP1914
+2022_eLife_Morris_cycling_murine_ovary_atlas	cycling_murine_ovary_atlas	16	7	7	model development only	16	16	0	yes	0	control_or_natural_aging	
+scrna_pseudobulk	E-MTAB-11491; E-MTAB-12889
+2024_Cell_Winkler_FRT_scRNA_spatial	female_reproductive_tract_aging_atlas	29	14	83	model development only	29	29	29	no	0	control_or_natural_aging	
+scrna_pseudobulk	GSE200612
+2024_LifeMedicine_Jiang_whole_life_mouse_ovary	whole_life_mouse_ovary	6	8	52.1785714285714	model development only	6	6	6	no	0	control_or_natural_aging	
+scrna_pseudobulk	GSE232309
+2024_NatureAging_Isola_aging_mouse_ovary_atlas	aging_mouse_ovary_atlas	8	13.0446428571429	39.1339285714286	model development only	8	8	8	no	0	control_or_natural_aging	
+scrna_pseudobulk	CRA010027
+2025_CommBio_Zhao_developing_ovary_scRNA_spatial	developing_ovary_scRNA_spatial	1	12.8571428571429	12.8571428571429	model development only	1	1	0	yes	0	control_or_natural_aging	
+scrna_pseudobulk	CRA019636
+2025_GeroScience_Zhang_multiomic_aging_mouse_ovary	multiomic_aging_mouse_ovary	3	13.0446428571429	52.1785714285714	model development only	3	3	3	no	0	control_or_natural_aging	
+scrna_pseudobulk	GSE317144
+2026_CommBio_Galligos_ovarian_inflammaging	ovarian_inflammaging	4	8.696428571428569	60.875	model development only	4	4	4	no	0	control_or_natural_aging	
+scrna_pseudobulk	GSE235021	scrna_pseudobulk_GSE235021_rice_diet_ovary	17	26.0892857142857	39.1339285714286	external projection only	0	0	0		17	external_projection_only	
+scrna_pseudobulk	PRJNA863443	PRJNA863443_VCD_Foxl2_natural_ageing_ovary_pseudobulk	33	13	87	external projection only	0	0	0		33	external_projection_only;control_or_natural_aging;genetic_model;intervention_or_vehicle	
+human_snrna_pseudobulk	GSE202601	human_GSE202601_whole_ovary_snRNA_pseudobulk	8	23 years	54 years	human cross-species transfer only	0	0	0		0	human_cross_species_zero_shot_only	
+													
+b, Reproductive age-bin definitions and profile counts													
+modality	reproductive_age_bin	age_range_week	age_range_month	age_range_note	N_model_development (PCA/EN training)	N_EN_training	N_external_projection_adult						
+bulk_rnaseq	young_adult	7 to <16	1.6 to <3.7	adult young-cycling/fertile window	21	15	58						
+bulk_rnaseq	mature_adult	16 to <40	3.7 to <9.2	mature adult before advanced maternal-age bin	32	29	130						
+bulk_rnaseq	advanced_maternal_age	40 to <65	9.2 to <15.0	advanced maternal-age to late reproductive-age window	10	10	15						
+bulk_rnaseq	post_reproductive_ageing	>=65	>=15.0	post-reproductive/estropausal-age window	6	6	8						
+scrna_pseudobulk	young_adult	7 to <16	1.6 to <3.7	adult young-cycling/fertile window	32	15	1						
+scrna_pseudobulk	mature_adult	16 to <40	3.7 to <9.2	mature adult before advanced maternal-age bin	18	18	37						
+scrna_pseudobulk	advanced_maternal_age	40 to <65	9.2 to <15.0	advanced maternal-age to late reproductive-age window	11	11	8						
+scrna_pseudobulk	post_reproductive_ageing	>=65	>=15.0	post-reproductive/estropausal-age window	6	6	4						
+total					136	110	269						

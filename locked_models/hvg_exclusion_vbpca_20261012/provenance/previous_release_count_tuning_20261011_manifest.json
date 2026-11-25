@@ -1,0 +1,284 @@
+{
+  "release": "count_tuning_20261011",
+  "locked_date": "2026-10-11",
+  "timezone": "Asia/Singapore",
+  "selection_authority": "User explicitly selected count-tuning for all three clock recipes.",
+  "procedure": "count_tuning",
+  "fit_scope": "Final fits on all 136 profiles; previously saved models copied without refitting.",
+  "selection_rule": "Inner LOSO macro-study MAE; one-SE lambda choice within each N/PC/alpha path, then lowest-MAE path winner. Gene identities follow training-only HVG or Version B ranking.",
+  "validation_scope": "Existing nested outer CV assesses the tuning procedure; all-136 deployment fits have no independent test set in this cohort.",
+  "models": [
+    {
+      "recipe": "HVG-ElasticNet",
+      "artifact": "HVG-ElasticNet/model.rds",
+      "procedure": "count_tuning",
+      "training_profiles": 136,
+      "input_genes": 3000,
+      "nonzero_effective_gene_coefficients": 61,
+      "PC_inputs": 0,
+      "nonzero_PCs": [],
+      "hyperparameters": {
+        "N": 3000,
+        "pc": 0,
+        "alpha": 0.5,
+        "lambda": 0.9112,
+        "inner_MAE": 13.307,
+        "inner_SE": 3.0051,
+        "minimum_path_MAE": 11.1045,
+        "threshold": 13.4678
+      }
+    },
+    {
+      "recipe": "VersionB-ElasticNet",
+      "artifact": "VersionB-ElasticNet/model.rds",
+      "procedure": "count_tuning",
+      "training_profiles": 136,
+      "input_genes": 5000,
+      "nonzero_effective_gene_coefficients": 64,
+      "PC_inputs": 0,
+      "nonzero_PCs": [],
+      "hyperparameters": {
+        "N": 5000,
+        "pc": 0,
+        "alpha": 0.1,
+        "lambda": 53.367,
+        "inner_MAE": 14.3119,
+        "inner_SE": 1.9897,
+        "minimum_path_MAE": 11.3063,
+        "threshold": 14.6056
+      }
+    },
+    {
+      "recipe": "VersionB-PCA/glmnet",
+      "artifact": "VersionB-PCA-glmnet/model.rds",
+      "procedure": "count_tuning",
+      "training_profiles": 136,
+      "input_genes": 3000,
+      "nonzero_effective_gene_coefficients": 3000,
+      "PC_inputs": 10,
+      "nonzero_PCs": [
+        1,
+        2,
+        5,
+        8
+      ],
+      "hyperparameters": {
+        "N": 3000,
+        "pc": 10,
+        "alpha": 1,
+        "lambda": 53.367,
+        "inner_MAE": 13.7558,
+        "inner_SE": 2.0099,
+        "minimum_path_MAE": 12.0729,
+        "threshold": 14.2143
+      }
+    }
+  ],
+  "sources": [
+    {
+      "source": "HVG-ElasticNet/count_tuning/results/final_model/coefficients.csv",
+      "locked_path": "HVG-ElasticNet/coefficients.csv",
+      "sha256": "00c574793d1d36e99abd18d6b21ae4068c342c717ad826604d0b95c704fda6c9"
+    },
+    {
+      "source": "HVG-ElasticNet/count_tuning/results/final_model/genes.txt",
+      "locked_path": "HVG-ElasticNet/genes.txt",
+      "sha256": "1c6ed300f6f01dec569211590da6af96a1859b7489a67b8374f3fba442386af7"
+    },
+    {
+      "source": "HVG-ElasticNet/count_tuning/results/final_model/hyperparameters.json",
+      "locked_path": "HVG-ElasticNet/hyperparameters.json",
+      "sha256": "ace11328e4025f49da1233e132b32ecae96c5bd96730284f7decdb7bf293e518"
+    },
+    {
+      "source": "HVG-ElasticNet/count_tuning/results/final_model/intercept.txt",
+      "locked_path": "HVG-ElasticNet/intercept.txt",
+      "sha256": "de52d245bccbcca4c647de1e419c1eb8fc8a6c9fa2a07f49b6bddf94e6f030b8"
+    },
+    {
+      "source": "HVG-ElasticNet/count_tuning/results/final_model/model.rds",
+      "locked_path": "HVG-ElasticNet/model.rds",
+      "sha256": "ae9ada3982b0bffceb207ef3c3f938344c40c60e0021e6825bbe84484c17f09b"
+    },
+    {
+      "source": "HVG-ElasticNet/count_tuning/results/final_model/scaler.csv",
+      "locked_path": "HVG-ElasticNet/scaler.csv",
+      "sha256": "94714bbc0433a785e4603821c60d2b05e7d9ab387e610e45ed5e990a816d36fa"
+    },
+    {
+      "source": "HVG-ElasticNet/count_tuning/results/config_used.json",
+      "locked_path": "HVG-ElasticNet/provenance/config_used.json",
+      "sha256": "4838dc32f8607e29dfb9005faa60fe3acc1a8d9b3680f17c57faff58f57d31fc"
+    },
+    {
+      "source": "HVG-ElasticNet/count_tuning/results/run_signature.txt",
+      "locked_path": "HVG-ElasticNet/provenance/run_signature.txt",
+      "sha256": "8a5c65618632fa8f5ed097747310237f5811a8a6db65df18e2241c4d2746656f"
+    },
+    {
+      "source": "HVG-ElasticNet/count_tuning/results/sessionInfo.txt",
+      "locked_path": "HVG-ElasticNet/provenance/sessionInfo.txt",
+      "sha256": "1a350f3219c47732b119734ee9c479ae92015f173c4f92d871e1336b16c07ceb"
+    },
+    {
+      "source": "HVG-ElasticNet/tuning_audit/final_r00_f0/count_tuning_candidate_summary.csv",
+      "locked_path": "HVG-ElasticNet/provenance/count_tuning_candidate_summary.csv",
+      "sha256": "3d64a984c4776e9bf958953d8f9876fd3abeb3b9f28e3013f71e8d1c440fc186"
+    },
+    {
+      "source": "HVG-ElasticNet/tuning_audit/final_r00_f0/inner_split_audit.csv",
+      "locked_path": "HVG-ElasticNet/provenance/inner_split_audit.csv",
+      "sha256": "920d7ddc00360c449087909fe20983b0276637d796757e4f7b5819925bb84f3c"
+    },
+    {
+      "source": "VersionB-ElasticNet/count_tuning/results/final_model/coefficients.csv",
+      "locked_path": "VersionB-ElasticNet/coefficients.csv",
+      "sha256": "0ee2c1b36c9f09c7354c2c376d6a2d891597ab5be3e9d912c508b22773dd8334"
+    },
+    {
+      "source": "VersionB-ElasticNet/count_tuning/results/final_model/genes.txt",
+      "locked_path": "VersionB-ElasticNet/genes.txt",
+      "sha256": "a5c96f71f07f4f852e0aed4c6f5f40e640fa5209be983ddd902e322c87436836"
+    },
+    {
+      "source": "VersionB-ElasticNet/count_tuning/results/final_model/hyperparameters.json",
+      "locked_path": "VersionB-ElasticNet/hyperparameters.json",
+      "sha256": "54aa688341c293e94931e0e01555e6975707c656679156ecf3a2faa46323d3a9"
+    },
+    {
+      "source": "VersionB-ElasticNet/count_tuning/results/final_model/intercept.txt",
+      "locked_path": "VersionB-ElasticNet/intercept.txt",
+      "sha256": "04e71d755d8b87c90f3e9dfe5a3aeceaa868b2892bc7bfbd155f358c4a90bd08"
+    },
+    {
+      "source": "VersionB-ElasticNet/count_tuning/results/final_model/model.rds",
+      "locked_path": "VersionB-ElasticNet/model.rds",
+      "sha256": "3241cd2c84b7dfa1cf5a37dc2d819c368d7a6912c0fc1ab7534308c65a8ab5c0"
+    },
+    {
+      "source": "VersionB-ElasticNet/count_tuning/results/final_model/scaler.csv",
+      "locked_path": "VersionB-ElasticNet/scaler.csv",
+      "sha256": "d2261e34529be10068c92429d11faa83a944cfa053d4f34934d930eea5ce3793"
+    },
+    {
+      "source": "VersionB-ElasticNet/count_tuning/results/config_used.json",
+      "locked_path": "VersionB-ElasticNet/provenance/config_used.json",
+      "sha256": "4838dc32f8607e29dfb9005faa60fe3acc1a8d9b3680f17c57faff58f57d31fc"
+    },
+    {
+      "source": "VersionB-ElasticNet/count_tuning/results/run_signature.txt",
+      "locked_path": "VersionB-ElasticNet/provenance/run_signature.txt",
+      "sha256": "8a5c65618632fa8f5ed097747310237f5811a8a6db65df18e2241c4d2746656f"
+    },
+    {
+      "source": "VersionB-ElasticNet/count_tuning/results/sessionInfo.txt",
+      "locked_path": "VersionB-ElasticNet/provenance/sessionInfo.txt",
+      "sha256": "1a350f3219c47732b119734ee9c479ae92015f173c4f92d871e1336b16c07ceb"
+    },
+    {
+      "source": "VersionB-ElasticNet/tuning_audit/final_r00_f0/count_tuning_candidate_summary.csv",
+      "locked_path": "VersionB-ElasticNet/provenance/count_tuning_candidate_summary.csv",
+      "sha256": "4937136aaa7dd7a98fb0985ed808ef0ef72cda84b027e83b8ad45efc49c7896e"
+    },
+    {
+      "source": "VersionB-ElasticNet/tuning_audit/final_r00_f0/inner_split_audit.csv",
+      "locked_path": "VersionB-ElasticNet/provenance/inner_split_audit.csv",
+      "sha256": "72b9dbf367bfcbbf2ac1b5693a98c511660076e0e915012d60581d01bb0b3ec7"
+    },
+    {
+      "source": "VersionB-PCA/glmnet/count_tuning/results/final_model/coefficients.csv",
+      "locked_path": "VersionB-PCA-glmnet/coefficients.csv",
+      "sha256": "110143750c989cc4241b8dcd43bda3433f12d6251cb3c44023dfbe4224249a33"
+    },
+    {
+      "source": "VersionB-PCA/glmnet/count_tuning/results/final_model/genes.txt",
+      "locked_path": "VersionB-PCA-glmnet/genes.txt",
+      "sha256": "ea32d0cbda709aa4a6902a8177bb2d61dd8dffd5de8c90987ec71c1960fbb3ed"
+    },
+    {
+      "source": "VersionB-PCA/glmnet/count_tuning/results/final_model/hyperparameters.json",
+      "locked_path": "VersionB-PCA-glmnet/hyperparameters.json",
+      "sha256": "cbb21bf57aa12ea10b47dca3452e37d515aa61f50cf47781b563365e82817328"
+    },
+    {
+      "source": "VersionB-PCA/glmnet/count_tuning/results/final_model/intercept.txt",
+      "locked_path": "VersionB-PCA-glmnet/intercept.txt",
+      "sha256": "bf7ac9e4eb2f13e7f2dfc8bcd04cab3a8c533429ddb21ef66a32db4313481dd4"
+    },
+    {
+      "source": "VersionB-PCA/glmnet/count_tuning/results/final_model/model.rds",
+      "locked_path": "VersionB-PCA-glmnet/model.rds",
+      "sha256": "5084dda16cb64f73f1726aacd4e3bf5936df9d87022a3e36aaf39676815af368"
+    },
+    {
+      "source": "VersionB-PCA/glmnet/count_tuning/results/final_model/pc_coefficients.csv",
+      "locked_path": "VersionB-PCA-glmnet/pc_coefficients.csv",
+      "sha256": "e3a1af0ba6e7df30589fa8a9ffc38267b5b9337b631a6d0e1bc3923a9e9c406a"
+    },
+    {
+      "source": "VersionB-PCA/glmnet/count_tuning/results/final_model/pca_loadings.csv",
+      "locked_path": "VersionB-PCA-glmnet/pca_loadings.csv",
+      "sha256": "62693b8902e5fc67221f760cb4d16aac46616ea3a43ec2f87bee4d59566dc9e1"
+    },
+    {
+      "source": "VersionB-PCA/glmnet/count_tuning/results/final_model/scaler.csv",
+      "locked_path": "VersionB-PCA-glmnet/scaler.csv",
+      "sha256": "c6808cad9ee30619a5a14cb667dc8695168238a9d42c8f98964342aea09c98ee"
+    },
+    {
+      "source": "VersionB-PCA/glmnet/count_tuning/results/config_used.json",
+      "locked_path": "VersionB-PCA-glmnet/provenance/config_used.json",
+      "sha256": "4838dc32f8607e29dfb9005faa60fe3acc1a8d9b3680f17c57faff58f57d31fc"
+    },
+    {
+      "source": "VersionB-PCA/glmnet/count_tuning/results/run_signature.txt",
+      "locked_path": "VersionB-PCA-glmnet/provenance/run_signature.txt",
+      "sha256": "8a5c65618632fa8f5ed097747310237f5811a8a6db65df18e2241c4d2746656f"
+    },
+    {
+      "source": "VersionB-PCA/glmnet/count_tuning/results/sessionInfo.txt",
+      "locked_path": "VersionB-PCA-glmnet/provenance/sessionInfo.txt",
+      "sha256": "1a350f3219c47732b119734ee9c479ae92015f173c4f92d871e1336b16c07ceb"
+    },
+    {
+      "source": "VersionB-PCA/glmnet/tuning_audit/final_r00_f0/count_tuning_candidate_summary.csv",
+      "locked_path": "VersionB-PCA-glmnet/provenance/count_tuning_candidate_summary.csv",
+      "sha256": "16580abab4d11f90ea7635888936816decf00a4b6357c05400a95a16298c3cef"
+    },
+    {
+      "source": "VersionB-PCA/glmnet/tuning_audit/final_r00_f0/inner_split_audit.csv",
+      "locked_path": "VersionB-PCA-glmnet/provenance/inner_split_audit.csv",
+      "sha256": "72b9dbf367bfcbbf2ac1b5693a98c511660076e0e915012d60581d01bb0b3ec7"
+    },
+    {
+      "source": "scripts/core.R",
+      "locked_path": "scripts/core.R",
+      "sha256": "56faac57dd39716aaaae2af90aaec6b29f1fddfa6c56f17072f962cee6d313e1"
+    },
+    {
+      "source": "scripts/predict_frozen.R",
+      "locked_path": "scripts/predict_frozen.R",
+      "sha256": "292dd3c03d62aa4139676bde0e99cfad2f675bbc40132753f4194ba43632a6fd"
+    },
+    {
+      "source": "shared_inputs/source_checksums.tsv",
+      "locked_path": "provenance/source_checksums.tsv",
+      "sha256": "15b72f1dfd49b17e6c4b8886f81b125b5d0eb303dda9a2752bae356193d0b6d0"
+    },
+    {
+      "source": "shared_inputs/normalization_comparison.tsv",
+      "locked_path": "provenance/normalization_comparison.tsv",
+      "sha256": "9b2bbacbc4f655cae97a7cc9f1d95252f99ecb90a8b37ee89c38e445b389d301"
+    },
+    {
+      "source": "shared_inputs/sample_metadata.csv",
+      "locked_path": "provenance/sample_metadata.csv",
+      "sha256": "ecec965ff84da9527098ad42f3aecf1f5634499c0cf0b3122d2526413cce1a3c"
+    },
+    {
+      "source": "RESULTS_REPORT.md",
+      "locked_path": "provenance/development_results_snapshot.md",
+      "sha256": "ffc36ae15383172a23e9ed1804113cedb94fe5a6b38eba749c44b868cc375da3"
+    }
+  ]
+}

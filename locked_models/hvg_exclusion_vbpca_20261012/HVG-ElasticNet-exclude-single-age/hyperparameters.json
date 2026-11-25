@@ -1,0 +1,10 @@
+{
+  "N": 3000,
+  "pc": 0,
+  "alpha": 0.5,
+  "lambda": 0.1789,
+  "inner_MAE": 7.1497,
+  "inner_SE": 0.9601,
+  "minimum_path_MAE": 6.5198,
+  "threshold": 7.3969
+}

@@ -1,14 +1,17 @@
 # Environment
 
-The reference environment uses R 4.4 and Python 3.12. `environment.yml` provides the complete user-facing environment, while `renv.lock` records direct R dependencies for R-only restoration.
+The locked fits used R 4.4.3 with glmnet 5.0, data.table 1.17.8, Matrix 1.7-5 and jsonlite 2.0.0. The complete session records are in `locked_models/hvg_exclusion_vbpca_20261012/*/provenance/sessionInfo.txt`. `environment.yml` (conda) and `renv.lock` (R only) give a matching user environment.
 
-Core R packages include `data.table`, `Matrix`, `dplyr`, `tidyr`, `tibble`, `stringr`, `ggplot2`, `glmnet`, `msigdbr`, and `Seurat`. Cross-species analyses additionally use `edgeR`, `limma`, and `matrixStats`; plot assembly uses `patchwork`, `ggrepel`, `forcats`, `scales`, and `ragg`.
+Additional packages by component:
 
-External requirements:
+| Component | Packages |
+|---|---|
+| Model development | glmnet, data.table, jsonlite, Matrix |
+| PCA/EN GSEA, metacell GSEA | msigdbr (MSigDB 2026.1.Mm) |
+| EN non-zero-gene ORA | clusterProfiler, org.Mm.eg.db (run in a separate R environment) |
+| Cross-species | limma, edgeR, matrixStats, MASS, Rcpp |
+| Metacell labelling and clocks | Seurat (anchor-based label transfer), Matrix, glmnet |
+| tAge comparison | tAge v1.0.1 R package and Biobase, for predictions and control subtraction; a Python environment with the tAge model files (`TAGE_PYTHON`), for feature extraction and validation |
+| Plotting and tables | ggplot2, patchwork, ggrepel, scales, ragg, systemfonts, png, dplyr, tidyr, tibble, stringr, readr, readxl |
 
-- sufficient memory for the prepared matrices and Seurat objects;
-- access to the public repositories listed in `metadata/dataset_accessions.tsv`;
-- acceptance of MSigDB terms for pathway retrieval;
-- optional SLURM for cluster-scale execution.
-
-No script requires an Abraxas-specific path. Use `OVARY_CLOCK_DATA_ROOT`, `OVARY_CLOCK_OUTPUT_ROOT`, and, for metacells, `OVARY_METACELL_PREPROCESS_ROOT`.
+Set `OPENBLAS_NUM_THREADS=1` and `OMP_NUM_THREADS=1` for bit-identical replay of the locked fits; the shell runners do this. The metacell labelling and CV steps need enough memory to load the standardized Seurat objects of eight datasets (about 350,000 cells). They were run on a SLURM cluster.

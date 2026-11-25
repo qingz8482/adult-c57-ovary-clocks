@@ -23,5 +23,13 @@ dependencies:
   - r-yaml
   - r-ragg
   - r-matrixstats
+  - r-jsonlite
+  - r-readxl
+  - r-rcpp
+  - r-mass
+  - r-png
+  - r-systemfonts
+  - bioconductor-clusterprofiler
+  - bioconductor-org.mm.eg.db
   - bioconductor-edger
   - bioconductor-limma

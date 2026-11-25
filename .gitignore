@@ -5,6 +5,7 @@ outputs/
 results/
 models/
 *.rds
+!locked_models/**/model.rds
 *.RData
 *.h5ad
 *.h5seurat

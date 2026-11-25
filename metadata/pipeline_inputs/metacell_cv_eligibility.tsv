@@ -1,0 +1,10 @@
+harmonized_cell_class	n_metacells	n_samples	n_datasets	n_age_bins	n_age_points	n_cells	outer_cv_folds	eligible_for_metacell_cv	ineligibility_reason
+B_Plasma	68	33	5	4	16	3189	5	TRUE	
+Endothelial	368	72	8	4	22	17943	5	TRUE	
+Epithelial	219	55	8	4	18	10367	5	TRUE	
+Granulosa	2256	73	8	4	22	112393	5	TRUE	
+Immune_Myeloid	432	72	8	4	22	21014	5	TRUE	
+Oocyte_Germline	4	2	1	2	2	191		FALSE	insufficient_model_metacells
+Pericyte_Smooth_Muscle	307	66	7	4	20	14946	5	TRUE	
+T_NK	399	62	8	4	22	19553	5	TRUE	
+Theca_Stroma	3000	73	8	4	22	149422	5	TRUE	

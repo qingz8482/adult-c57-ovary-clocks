@@ -1,0 +1,17 @@
+broad_class	fine_state	clock_eligible	description
+Granulosa	follicular	TRUE	Preantral, antral, mural, cumulus and estrous-stage granulosa cells.
+Granulosa	luteal	TRUE	Corpus luteum (active or regressing) steroidogenic cells of granulosa lineage.
+Granulosa	atretic	TRUE	Granulosa cells of atretic follicles.
+Granulosa	cycling	TRUE	Proliferating granulosa cells.
+Theca_Stroma	theca	TRUE	Immature and steroidogenic theca cells.
+Theca_Stroma	stroma	TRUE	Cortical, medullary and generic ovarian stromal fibroblasts.
+Theca_Stroma	cycling	TRUE	Proliferating mesenchyme.
+Pericyte_Smooth_Muscle	pericyte_smc	TRUE	Pericytes and vascular/ovarian smooth muscle.
+Endothelial	endothelial	TRUE	Blood and lymphatic endothelium.
+Epithelial	epithelial	TRUE	Ovarian surface and other epithelium.
+Immune_Myeloid	myeloid	TRUE	Macrophages, monocytes, dendritic cells, neutrophils/granulocytes.
+T_NK	lymphoid	TRUE	T, NK and NKT cells.
+B_Plasma	lymphoid	TRUE	B and plasma cells.
+Oocyte_Germline	germline	FALSE	Oocytes; excluded from somatic clocks.
+Erythroid	erythroid	FALSE	Red blood cells; excluded.
+Unknown	unknown	FALSE	Unresolved, low quality, doublet-like or conflicting evidence.
