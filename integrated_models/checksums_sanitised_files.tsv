@@ -1,6 +1,6 @@
 path	original_sha256	reason
 HVG-ElasticNet-exclude-single-age/provenance/sessionInfo.txt	acb791a5d2b58f3be849b0330c14ca1e500aad0addc44bab5abfcc959310748d	cluster paths removed for public release
-README.md	57c3579cae2962c4a51047e12c321ebe9a946803a0296d72dc22a621c14b3696	cluster paths removed for public release
+README.md	57c3579cae2962c4a51047e12c321ebe9a946803a0296d72dc22a621c14b3696	rewritten for public release (merged with the repository overview)
 VersionB-PCA-glmnet/provenance/sessionInfo.txt	1a350f3219c47732b119734ee9c479ae92015f173c4f92d871e1336b16c07ceb	cluster paths removed for public release
 manifest.json	0127feaaeb8caefd29ea851a07988b203ed2c94b82449e10fe1ba95fd601bfda	cluster paths removed for public release
 provenance/sample_metadata.csv	ecec965ff84da9527098ad42f3aecf1f5634499c0cf0b3122d2526413cce1a3c	cluster paths removed for public release

@@ -4,7 +4,7 @@ set -euo pipefail
 repo_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$repo_dir"
 
-required=(README.md LICENSE CITATION.cff environment.yml renv.lock locked_models/hvg_exclusion_vbpca_20261012/HVG-ElasticNet-exclude-single-age/model.rds locked_models/hvg_exclusion_vbpca_20261012/VersionB-PCA-glmnet/model.rds integrated_clocks metacell_clocks metadata/manuscript_tables metadata/pipeline_inputs docs/manuscript_code_map.tsv tests)
+required=(README.md LICENSE CITATION.cff environment.yml renv.lock integrated_models/HVG-ElasticNet-exclude-single-age/model.rds integrated_models/VersionB-PCA-glmnet/model.rds integrated_clocks metacell_clocks metadata/manuscript_tables metadata/pipeline_inputs docs/manuscript_code_map.tsv tests)
 for path in "${required[@]}"; do test -e "$path" || { echo "missing required path: $path" >&2; exit 1; }; done
 
 if grep -RInE '/mnt/beegfs|/home/qingz8482' --exclude-dir=.git --exclude=validate_repository.sh .; then
@@ -27,11 +27,11 @@ if grep -RInE '(BEGIN (RSA|OPENSSH|EC) PRIVATE KEY|ghp_[A-Za-z0-9]{20,}|github_p
   exit 1
 fi
 
-while IFS= read -r -d '' script; do python3 -c 'import ast, pathlib, sys; ast.parse(pathlib.Path(sys.argv[1]).read_text())' "$script"; done < <(find integrated_clocks metacell_clocks locked_models -name '*.py' -print0)
+while IFS= read -r -d '' script; do python3 -c 'import ast, pathlib, sys; ast.parse(pathlib.Path(sys.argv[1]).read_text())' "$script"; done < <(find integrated_clocks metacell_clocks integrated_models -name '*.py' -print0)
 
 rscript_bin="${RSCRIPT:-$(command -v Rscript || true)}"
 if [[ -n "$rscript_bin" ]]; then
-  "$rscript_bin" -e 'files <- list.files(c("integrated_clocks", "metacell_clocks", "locked_models", "tests"), pattern="[.]R$", recursive=TRUE, full.names=TRUE); invisible(lapply(files, parse))'
+  "$rscript_bin" -e 'files <- list.files(c("integrated_clocks", "metacell_clocks", "integrated_models", "tests"), pattern="[.]R$", recursive=TRUE, full.names=TRUE); invisible(lapply(files, parse))'
   "$rscript_bin" tests/validate_metadata.R "$repo_dir"
   while IFS=$'\t' read -r _ _ analysis; do
     for p in $(printf '%s' "$analysis" | tr ';' '\n' | sed -E 's/^ +//'); do

@@ -1,6 +1,6 @@
 # Environment
 
-The locked fits used R 4.4.3 with glmnet 5.0, data.table 1.17.8, Matrix 1.7-5 and jsonlite 2.0.0. The complete session records are in `locked_models/hvg_exclusion_vbpca_20261012/*/provenance/sessionInfo.txt`. `environment.yml` (conda) and `renv.lock` (R only) give a matching user environment.
+The locked fits used R 4.4.3 with glmnet 5.0, data.table 1.17.8, Matrix 1.7-5 and jsonlite 2.0.0. The complete session records are in `integrated_models/*/provenance/sessionInfo.txt`. `environment.yml` (conda) and `renv.lock` (R only) give a matching user environment.
 
 Additional packages by component:
 

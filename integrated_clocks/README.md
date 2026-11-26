@@ -38,7 +38,7 @@ python3 scripts/run_all.py --workers=8 --phases='A;B,C;final;A_repeated'
 
 ## Locked models
 
-The final fits are copied unchanged to [`../locked_models/hvg_exclusion_vbpca_20261012`](../locked_models/README.md). Steps 3–7 check that they read this release before reporting.
+The final fits are copied unchanged to [`../integrated_models`](../integrated_models/README.md). Steps 3–7 check that they read this release before reporting.
 
 ## Third-party components
 

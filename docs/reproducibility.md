@@ -16,7 +16,7 @@
 - gene-set snapshots;
 - the third-party tAge software.
 
-The integrated-clock predictions can be reproduced exactly from the locked models given correctly prepared ln(1 + CPM) inputs. `locked_models/hvg_exclusion_vbpca_20261012/validation/replay_checks.csv` records that each locked object reproduces its 110 or 136 training-profile predictions exactly. The exported coefficients reproduce them to within 10⁻¹³ weeks. Repeating model development needs the prepared 136-profile matrix, which `integrated_clocks/01_input_preparation` builds from the public datasets.
+The integrated-clock predictions can be reproduced exactly from the locked models given correctly prepared ln(1 + CPM) inputs. `integrated_models/validation/replay_checks.csv` records that each locked object reproduces its 110 or 136 training-profile predictions exactly. The exported coefficients reproduce them to within 10⁻¹³ weeks. Repeating model development needs the prepared 136-profile matrix, which `integrated_clocks/01_input_preparation` builds from the public datasets.
 
 Interpretation limits stated in the manuscript:
 
