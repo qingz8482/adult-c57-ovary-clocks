@@ -2,7 +2,7 @@
 
 All source datasets are public. Dataset accessions and repositories are listed in `metadata/dataset_accessions.tsv`. Sample-level accessions are in `metadata/manuscript_tables/SD2a_model_development_profiles.tsv` and `SD2b_external_projection_profiles.tsv`.
 
-This repository does not redistribute FASTQ files, count matrices, Seurat objects, pseudobulk or metacell matrices, or generated results. The two locked integrated clocks are included in `integrated_models/`.
+This repository does not redistribute FASTQ files, count matrices, Seurat objects, pseudobulk or metacell matrices, or generated results. The two locked integrated clocks are included in `integrated_clocks/final_models/`.
 
 ## Inputs expected by the code
 

@@ -18,7 +18,7 @@ Some scripts read sibling outputs by relative path, for example `../lockedmodel`
 | `integrated_clocks/02_model_development` with `production_rebutal3_reference.json` as `config/production.json` (PCA/EN) | `rebutal3_batcheffects removal_CV_LOO/model_development` |
 | `integrated_clocks/03_pca_interpretation` (except `backprojection/`) | `rebutal3_batcheffects removal_CV_LOO/model_development/VersionB-PCA/diagnostic` |
 | `integrated_clocks/03_pca_interpretation/backprojection` | `rebutal4/backprojection_PCA` |
-| `integrated_models` | `rebutal4/lockedmodel` |
+| `integrated_clocks/final_models` | `rebutal4/lockedmodel` |
 | `integrated_clocks/04_external_projection` | `rebutal4/lockedmodel_application` |
 | `integrated_clocks/05_tage_comparison` | `rebutal4/compare_tAge` |
 | `integrated_clocks/06_cross_species` | `rebutal4/generalization_tohuman` |
@@ -30,7 +30,7 @@ Some scripts read sibling outputs by relative path, for example `../lockedmodel`
 ## Run order
 
 1. **Inputs.** Run `integrated_clocks/01_input_preparation/scripts/prepare_inputs.R`.
-2. **Model development.** Run `integrated_clocks/02_model_development/scripts/run_all.py --phases='A;B,C;final;A_repeated'`, once with each config, then `summarize_results.R`. The final fits form `integrated_models`. Its `scripts/build_release.py` and `scripts/validate_release.R` assembled and replay-checked the release.
+2. **Model development.** Run `integrated_clocks/02_model_development/scripts/run_all.py --phases='A;B,C;final;A_repeated'`, once with each config, then `summarize_results.R`. The final fits form `integrated_clocks/final_models`. Its `scripts/build_release.py` and `scripts/validate_release.R` assembled and replay-checked the release.
 3. **PCA/EN interpretation.** Run `integrated_clocks/03_pca_interpretation/scripts/run_all.sh`, which calls `supple2_PCA/scripts/run_all.sh`.
 4. **External projection.** Run `integrated_clocks/04_external_projection/scripts/run_all.sh`, then the figure scripts `08_clock_concordance_no_developmental_ood.R` and `14_…`–`17_…`, then `detectable_shift/detectable_shift.R`.
 5. **tAge comparison.** Run `integrated_clocks/05_tage_comparison/scripts/run_all.sh`; it needs the projection outputs from step 4.

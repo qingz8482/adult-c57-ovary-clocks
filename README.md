@@ -15,7 +15,7 @@ This release matches the revised manuscript. Version `v0.1-initial-submission` h
   - **Stages B and C:** NIHMS1554107 or the Winkler atlas held out.
   - **Inner loop:** leave-one-study-out tuning with the one-SE λ rule.
 - **Training rule.** The EN clock excludes the five single-age studies (26 profiles) from every training set and from the final fit (110 profiles, 9 studies, 8–83 weeks). The PCA/EN clock uses all 136 profiles.
-- **Locked integrated clocks** (locked 2026-10-12, in `integrated_models/`):
+- **Locked integrated clocks** (locked 2026-10-12, in `integrated_clocks/final_models/`):
   - EN: N = 3,000 genes, α = 0.5, λ = 0.179, 79 non-zero genes.
   - PCA/EN: N = 3,000 genes, 10 PC inputs, α = 1, λ = 53.4; active PCs are PC1, PC2, PC5 and PC8.
   - No calibration or batch correction is applied.
@@ -32,8 +32,7 @@ This release matches the revised manuscript. Version `v0.1-initial-submission` h
 
 | Folder | Contents |
 |---|---|
-| [`integrated_models/`](integrated_models/README.md) | The two deployed integrated clocks: `model.rds`, exported coefficients, scalers, PCA loadings, provenance, replay checks and checksums. |
-| [`integrated_clocks/`](integrated_clocks/README.md) | Input preparation, nested-CV model development, PCA/EN interpretation, external projection, tAge comparison, cross-species analyses and EN non-zero-gene ORA. |
+| [`integrated_clocks/`](integrated_clocks/README.md) | The two locked integrated clocks in `final_models/` (`model.rds`, exported coefficients, scalers, PCA loadings, provenance, replay checks and checksums), plus input preparation, nested-CV model development, PCA/EN interpretation, external projection, tAge comparison, cross-species analyses and EN non-zero-gene ORA. |
 | [`metacell_clocks/`](metacell_clocks/README.md) | v1 label audit, v2 labelling and metacell clock fitting, and the v2 figure and table release, including stress-test projections. |
 | [`metadata/`](metadata/README.md) | Supplementary Data 1–5 as TSV, plus the sample, fold and contrast tables the pipelines read. |
 | [`docs/`](docs/workflow.md) | Workflow, manuscript-to-code map, data access, environment and reproducibility boundary. |
@@ -42,13 +41,13 @@ This release matches the revised manuscript. Version `v0.1-initial-submission` h
 ## Applying the locked clocks
 
 ```bash
-cd integrated_models
+cd integrated_clocks/final_models
 python3 verify_checksums.py
 Rscript scripts/predict_frozen.R HVG-ElasticNet-exclude-single-age/model.rds new_logcpm.csv predictions.csv
 Rscript scripts/predict_frozen.R VersionB-PCA-glmnet/model.rds new_logcpm.csv predictions.csv
 ```
 
-The input is a genes-by-samples CSV/TSV with gene symbols in the first column. Values are ln(1 + CPM), with CPM computed from the full pre-filter library total. Missing model genes are imputed with the training mean. Output ages are in weeks. Predictions outside the training age range (EN: 8–83 weeks; PCA/EN: 7–83 weeks) are extrapolations. See [`integrated_models/README.md`](integrated_models/README.md).
+The input is a genes-by-samples CSV/TSV with gene symbols in the first column. Values are ln(1 + CPM), with CPM computed from the full pre-filter library total. Missing model genes are imputed with the training mean. Output ages are in weeks. Predictions outside the training age range (EN: 8–83 weeks; PCA/EN: 7–83 weeks) are extrapolations. See [`integrated_clocks/final_models/README.md`](integrated_clocks/final_models/README.md).
 
 ## Installation
 

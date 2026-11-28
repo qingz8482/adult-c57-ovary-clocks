@@ -8,7 +8,7 @@
 suppressPackageStartupMessages(library(data.table))
 fa <- sub("^--file=", "", grep("^--file=", commandArgs(FALSE), value = TRUE)[1])
 repo <- normalizePath(file.path(dirname(fa), ".."))
-rel <- file.path(repo, "integrated_models")
+rel <- file.path(repo, "integrated_clocks", "final_models")
 rscript <- file.path(R.home("bin"), "Rscript")
 tmp <- tempfile("locked_smoke_"); dir.create(tmp)
 set.seed(20261125)

@@ -11,6 +11,7 @@ Each numbered folder is one analysis step. Within a step, scripts keep their ori
 | 5 | `05_tage_comparison/` | Comparison with the tAge scaled-difference and YuGene-difference clocks: contrast effects, gene-weight concordance and model-resolved pathway permutation tests (Fig. 3, Supplementary Fig. 3). |
 | 6 | `06_cross_species/` | Stage A: conservation of gene-level age direction (mouse vs GTEx). Stage B: frozen zero-shot projection to GTEx and GSE202601, with permuted-weight, matched-random-signature and Freedman–Lane nulls (Supplementary Fig. 7). |
 | 7 | `07_en_ora/` | One-sided hypergeometric over-representation of the 79 non-zero EN genes, split by coefficient sign, against the 2,952 Entrez-mapped HVG candidate genes (GO, KEGG, Reactome, Hallmark; BH correction). |
+| — | [`final_models/`](final_models/README.md) | The two locked deployment models produced by step 2 (`model.rds`, exported coefficients, scalers, PCA loadings, provenance, replay checks and checksums) and `predict_frozen.R` for applying them. Steps 3–7 read these. |
 
 ## Model development (step 2)
 
@@ -38,7 +39,7 @@ python3 scripts/run_all.py --workers=8 --phases='A;B,C;final;A_repeated'
 
 ## Locked models
 
-The final fits are copied unchanged to [`../integrated_models`](../integrated_models/README.md). Steps 3–7 check that they read this release before reporting.
+The final fits are copied unchanged to [`final_models/`](final_models/README.md). Steps 3–7 check that they read this release before reporting.
 
 ## Third-party components
 
